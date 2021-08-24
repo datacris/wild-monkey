@@ -22,6 +22,7 @@ function Home() {
   };
 
   const handleLogin = () => {
+    console.log("Sigining in......");
     clearErrors();
     authentication.signInWithEmailAndPassword(email, password).catch((err) => {
       switch (err.code) {
@@ -38,6 +39,7 @@ function Home() {
   };
 
   const handleSignUp = () => {
+    console.log("Sigining up......");
     clearErrors();
     authentication
       .createUserWithEmailAndPassword(email, password)
