@@ -7,8 +7,8 @@ function Header() {
     <div className="header-navbar">
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
-          <a className="navbar-brand" href="/links">
-            <img className="header-logo-custom" src={Logo} />
+          <a className="navbar-brand" href="/home">
+            <img className="header-logo-custom" src={Logo} alt="..." />
           </a>
 
           <button
@@ -26,14 +26,14 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="/links">
+                <a className="nav-link active" href="/home">
                   Home
                   <span className="visually-hidden">(current)</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/features">
-                  Features
+                <a className="nav-link" href="/links">
+                  Links
                 </a>
               </li>
               <li className="nav-item">

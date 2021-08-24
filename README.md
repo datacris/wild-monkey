@@ -1,8 +1,11 @@
 # This project uses the following libraries
 
-Icons with Materialize
-CSS Framework bootswatch
-Alerts with Toastify
+Icons with Materialize \
+CSS Framework bootswatch \
+Alerts with Toastify \
+Redux \
+Redux-react \
+Redux js toolkit \
 
 # Getting Started with Create React App
 
