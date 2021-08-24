@@ -56,7 +56,7 @@ const LinksForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit} className="card card-body border-primary">
-      <div className="form-group input-group">
+      <div className="form-group input-group mb-1">
         <div className="input-group-text bg-light">
           <i className="material-icons">insert_link</i>
         </div>
@@ -69,7 +69,7 @@ const LinksForm = (props) => {
           onChange={handleInputChange}
         />
       </div>
-      <div className="form-group input-group">
+      <div className="form-group input-group mb-1">
         <div className="input-group-text bg-light">
           <i className="material-icons">create</i>
         </div>
@@ -82,7 +82,7 @@ const LinksForm = (props) => {
           onChange={handleInputChange}
         />
       </div>
-      <div className="form-group">
+      <div className="form-group mb-1">
         <textarea
           rows="3"
           className="form-control"

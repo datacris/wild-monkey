@@ -1,3 +1,9 @@
+# This project uses the following libraries
+
+Icons with Materialize
+CSS Framework bootswatch
+Alerts with Toastify
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,14 @@
+.header-logo-custom {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.header-navbar {
+  padding-bottom: 4rem;
+}
+.not-found-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45rem;
+  height: 35rem;
+}
