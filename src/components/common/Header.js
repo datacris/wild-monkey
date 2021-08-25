@@ -1,8 +1,13 @@
 import React from "react";
 import Logo from "../../assets/images/wild-monkey-ico.png";
 import "./styles.css";
+import { handleLogout } from "../Authentication/Helper";
+//Redux imports
+import { useSelector } from "react-redux";
 
 function Header() {
+  const userState = useSelector((state) => state.user.value);
+
   return (
     <div className="header-navbar">
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
@@ -47,16 +52,35 @@ function Header() {
                 </a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-sm-2"
-                type="text"
-                placeholder="Search"
-              />
-              <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-                Search
-              </button>
-            </form>
+
+            <div className="d-flex">
+              {userState.userEmail ? (
+                <div>
+                  <p>Hello {userState.userEmail}</p>
+                  {/* {userState.userId} */}
+                  <button
+                    className="btn btn-secondary my-2 my-sm-0"
+                    type="submit"
+                    onClick={handleLogout}
+                  >
+                    LogOut
+                  </button>
+                </div>
+              ) : (
+                <ul className="navbar-nav me-auto">
+                  <li className="nav-item">
+                    <a className="nav-link" href="/signIn">
+                      Sign In
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/signUp">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </div>
           </div>
         </div>
       </nav>

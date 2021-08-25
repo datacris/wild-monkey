@@ -4,11 +4,25 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./firebase";
+// Redux Imports
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import userReducer from "./components/Contexts/User";
+// Bootstrap Imports (bootswatch)
 import "bootswatch/dist/minty/bootstrap.min.css";
+
+//Redux Store
+const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
