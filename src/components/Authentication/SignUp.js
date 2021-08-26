@@ -61,6 +61,8 @@ function SignUp() {
             userId: user.uid,
           })
         );
+        localStorage.setItem("userEmail", JSON.stringify(user.email));
+        localStorage.setItem("userId", JSON.stringify(user.uid));
         clearInputs();
         history.push("/home");
       } else {
@@ -114,13 +116,13 @@ function SignUp() {
           </div>
 
           <button
-            className="btn btn-primary btn-block mt-4"
+            className="btn btn-primary btn-block mt-4 mb-3"
             onClick={handleSignUp}
           >
             Sign Up
           </button>
           <p>
-            Have an account?{" "}
+            Have an account?{"  "}
             <span onClick={() => history.push("/signIn")}>Sign In</span>
           </p>
         </form>

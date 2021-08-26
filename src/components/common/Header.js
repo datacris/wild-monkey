@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/images/wild-monkey-ico.png";
 import "./styles.css";
 import { handleLogout } from "../Authentication/Helper";
@@ -6,7 +6,19 @@ import { handleLogout } from "../Authentication/Helper";
 import { useSelector } from "react-redux";
 
 function Header() {
+  //Getting redux state for user context
+  // in this scenario, the Redux State is used for triggering the useEffect method to get the user´s info
   const userState = useSelector((state) => state.user.value);
+
+  const [userEmail, setUserEmail] = useState();
+  const [userId, setUserId] = useState();
+
+  useEffect(() => {
+    const savedEmail = localStorage.getItem("userEmail");
+    setUserEmail(JSON.parse(savedEmail));
+    const savedId = localStorage.getItem("userId");
+    setUserId(JSON.parse(savedId));
+  }, [userState]);
 
   return (
     <div className="header-navbar">
@@ -54,10 +66,9 @@ function Header() {
             </ul>
 
             <div className="d-flex">
-              {userState.userEmail ? (
+              {userEmail ? (
                 <div>
-                  <p>Hello {userState.userEmail}</p>
-                  {/* {userState.userId} */}
+                  <p>Hello {userEmail}</p>
                   <button
                     className="btn btn-secondary my-2 my-sm-0"
                     type="submit"
