@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Links from "./components/Links";
@@ -6,7 +5,7 @@ import Layout from "./components/common/Layout";
 import NotFound from "./components/common/NotFound";
 import SignIn from "./components/Authentication/SignIn";
 import SignUp from "./components/Authentication/SignUp";
-import Home from "./components/common/Home"
+import Home from "./components/common/Home";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
