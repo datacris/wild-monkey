@@ -116,7 +116,7 @@ function SignUp() {
           </div>
 
           <button
-            className="btn btn-primary btn-block mt-4 mb-3"
+            className="btn btn-primary btn-block mt-4 mb-3 btn-custom-jump"
             onClick={handleSignUp}
           >
             Sign Up

@@ -39,3 +39,11 @@ span {
     transform: rotate(360deg);
   }
 }
+.btn-custom-jump {
+  transform: translate(-1%);
+  transition: all 0.4s;
+}
+.btn-custom-jump:hover {
+  transform: translate(-1%, -8%);
+  box-shadow: 0 0 1rem #61dafb;
+}

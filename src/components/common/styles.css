@@ -13,3 +13,8 @@
   height: 35rem;
   opacity: 0.6;
 }
+.main-image-custom {
+  opacity: 0.8;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(71, 59, 19, 0.521);
+}
